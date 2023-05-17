@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
+import useTitle from '../../hooks/usTitle';
 
 const Alltoys = () => {
+    useTitle('k3 || All Toys');
   const [toysData, setToysData] = useState([]);
 
   useEffect(() => {
@@ -18,13 +20,14 @@ const Alltoys = () => {
   }, []);
 
   return (
-    <div>
-      <h3>This is the All Toys Page</h3>
+    <>
+    <div className="grid grid-cols-3 gap-4">
+      <h3 className="col-span-3 text-center">This is the All Toys Page</h3>
       {toysData.map((toy) => (
-        <div key={toy.id}>
-          <h4>{toy.name}</h4>
-          <img src={toy.picture} alt={toy.name} />
-          <p>Price: ${toy.price}</p>
+        <div key={toy.id} className="relative bg-white p-4 shadow-md">
+          <h4 className="text-lg font-semibold">{toy.name}</h4>
+          <img src={toy.picture} alt={toy.name} className="w-3/4 mx-auto mb-4" />
+          <p className="mt-2">Price: ${toy.price}</p>
           <p>Rating: {toy.rating}</p>
           <p>Age Group: {toy.ageGroup}</p>
           <p>Description: {toy.description}</p>
@@ -34,10 +37,15 @@ const Alltoys = () => {
           <p>Available Quantity: {toy.availableQuantity}</p>
           <p>Shipping Method: {toy.shipping.method}</p>
           <p>Shipping Time: {toy.shipping.time}</p>
-          <hr />
+          <button
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-4 py-2 rounded-md"
+          >
+            View Details
+          </button>
         </div>
       ))}
     </div>
+  </>
   );
 };
 

@@ -1,5 +1,7 @@
 import { Link, } from "react-router-dom";
 
+import logo from "../../assets/kindersKidLogoTest.svg";
+
 const Navbar = () => {
   return (
     <>
@@ -47,7 +49,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/" className="btn btn-ghost normal-case text-xl">
-            Kinder Kids
+           <img src={logo} alt="" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

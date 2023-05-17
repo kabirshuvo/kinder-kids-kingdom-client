@@ -1,6 +1,9 @@
-import React from "react";
+import useTitle from "../hooks/usTitle";
+import AboutUs from "./AboutUs/AboutUs";
+
 
 const Home = () => {
+    useTitle('k3 || Home');
   return (
     <>
       <div
@@ -11,7 +14,7 @@ const Home = () => {
       >
         <div className="hero-overlay bg-opacity-80"></div>
         <div className="container mx-auto">
-          <div className="max-w-md text-center md:text-left">
+          <div className="max-w-md text-center md:text-left md:ms-32">
             <h1 className="mb-5 text-5xl font-bold">
               <span className="text-primary">K</span>inder <br />
               <span className="text-primary">K</span>ids <br />
@@ -30,6 +33,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <AboutUs></AboutUs>
     </>
   );
 };
