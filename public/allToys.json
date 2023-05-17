@@ -1,0 +1,490 @@
+[
+  {
+    "id": "1",
+    "categoryId": "1",
+    "picture": "https://images.unsplash.com/photo-1517331028157-75de91e10628?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
+    "name": "Wooden Craft Shapes",
+    "price": 9.99,
+    "rating": 4.5,
+    "ageGroup": "3+",
+    "description": "Assorted wooden craft shapes for painting and decorating.",
+    "sellerName": "Crafty Creations",
+    "category": "Arts & Crafts",
+    "subcategory": "Craft Supplies",
+    "availableQuantity": 20,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+
+  {
+    "id": "2",
+    "categoryId": "1",
+    "picture": "https://images.unsplash.com/photo-1554343594-1c9d305bd51f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1159&q=80",
+    "name": "Crayon Set",
+    "price": 6.99,
+    "rating": 4.3,
+    "ageGroup": "4+",
+    "description": "Set of colorful crayons for drawing and coloring.",
+    "sellerName": "Creative Expressions",
+    "category": "Arts & Crafts",
+    "subcategory": "Drawing & Painting",
+    "availableQuantity": 15,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "3",
+    "categoryId": "1",
+    "picture": "https://images.unsplash.com/photo-1550001437-281dcb39e26d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    "name": "Watercolor Set",
+    "price": 12.99,
+    "rating": 4.7,
+    "ageGroup": "6+",
+    "description": "Set of watercolor paints and brushes for creating beautiful artwork.",
+    "sellerName": "Artistic Expressions",
+    "category": "Arts & Crafts",
+    "subcategory": "Drawing & Painting",
+    "availableQuantity": 10,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "4",
+    "categoryId": "1",
+    "picture": "https://images.unsplash.com/photo-1645729897768-2d055814d3dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "name": "Paint Brushes Set",
+    "price": 8.99,
+    "rating": 4.2,
+    "ageGroup": "5+",
+    "description": "Set of various paint brushes for different painting techniques.",
+    "sellerName": "Crafty Creations",
+    "category": "Arts & Crafts",
+    "subcategory": "Craft Supplies",
+    "availableQuantity": 12,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "5",
+    "categoryId": "1",
+    "picture": "https://images.unsplash.com/photo-1639465294781-d4d5d7319951?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+    "name": "Glitter Set",
+    "price": 5.99,
+    "rating": 4.5,
+    "ageGroup": "4+",
+    "description": "Assorted set of glitter for adding sparkle to crafts and artworks.",
+    "sellerName": "Creative Expressions",
+    "category": "Arts & Crafts",
+    "subcategory": "Craft Supplies",
+    "availableQuantity": 18,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "6",
+    "categoryId": "1",
+    "picture": "https://images.unsplash.com/photo-1614639935349-3507fee706d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80",
+    "name": "Sticker Set",
+    "price": 4.99,
+    "rating": 4.1,
+    "ageGroup": "3+",
+    "description": "Set of colorful stickers for decorating crafts and artworks.",
+    "sellerName": "Artistic Expressions",
+    "category": "Arts & Crafts",
+    "subcategory": "Craft Supplies",
+    "availableQuantity": 25,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "7",
+    "categoryId": "1",
+    "picture": "https://images.unsplash.com/photo-1596567181723-ba7d15eacefb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80",
+    "name": "Paint Palette",
+    "price": 3.99,
+    "rating": 4.6,
+    "ageGroup": "5+",
+    "description": "Plastic paint palette for mixing and holding paint colors.",
+    "sellerName": "Crafty Creations",
+    "category": "Arts & Crafts",
+    "subcategory": "Craft Supplies",
+    "availableQuantity": 20,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "8",
+    "categoryId": "1",
+    "picture": "https://images.unsplash.com/photo-1520014443023-9fb2b7860d1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "name": "Colored Pencils Set",
+    "price": 7.99,
+    "rating": 4.4,
+    "ageGroup": "6+",
+    "description": "Set of colored pencils for vibrant drawing and coloring.",
+    "sellerName": "Creative Expressions",
+    "category": "Arts & Crafts",
+    "subcategory": "Drawing & Painting",
+    "availableQuantity": 15,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+
+  {
+    "id": "9",
+    "categoryId": "2",
+    "picture": "https://images.unsplash.com/photo-1587925420649-89760ff7baab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1058&q=80",
+    "name": "Wooden Craft Shapes",
+    "price": 9.99,
+    "rating": 4.5,
+    "ageGroup": "3+",
+    "description": "Assorted wooden craft shapes for painting and decorating.",
+    "sellerName": "Crafty Creations",
+    "category": "Science & Exploration",
+    "subcategory": "Craft Supplies",
+    "availableQuantity": 20,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "10",
+    "categoryId": "2",
+    "picture": "https://images.unsplash.com/photo-1475669698648-2f144fcaaeb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "name": "Crayon Set",
+    "price": 6.99,
+    "rating": 4.3,
+    "ageGroup": "4+",
+    "description": "Set of colorful crayons for drawing and coloring.",
+    "sellerName": "Creative Expressions",
+    "category": "Science & Exploration",
+    "subcategory": "Drawing & Painting",
+    "availableQuantity": 15,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "11",
+    "categoryId": "2",
+    "picture": "https://images.unsplash.com/photo-1550001437-281dcb39e26d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    "name": "Watercolor Set",
+    "price": 12.99,
+    "rating": 4.7,
+    "ageGroup": "6+",
+    "description": "Set of watercolor paints and brushes for creating beautiful artwork.",
+    "sellerName": "Artistic Expressions",
+    "category": "Science & Exploration",
+    "subcategory": "Drawing & Painting",
+    "availableQuantity": 10,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "12",
+    "categoryId": "2",
+    "picture": "https://images.unsplash.com/photo-1493244040629-496f6d136cc4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1149&q=80",
+    "name": "Slime Kit",
+    "price": 14.99,
+    "rating": 4.6,
+    "ageGroup": "8+",
+    "description": "Complete slime kit with different colors and accessories for slime-making fun.",
+    "sellerName": "Creative Science",
+    "category": "Science & Exploration",
+    "subcategory": "Chemistry & Biology",
+    "availableQuantity": 15,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "13",
+    "categoryId": "2",
+    "picture": "https://images.unsplash.com/photo-1572884267966-02340ebc90ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "name": "Microscope Set",
+    "price": 29.99,
+    "rating": 4.8,
+    "ageGroup": "10+",
+    "description": "Beginner microscope set with slides and tools for exploring the microscopic world.",
+    "sellerName": "Discover Science",
+    "category": "Science & Exploration",
+    "subcategory": "Chemistry & Biology",
+    "availableQuantity": 8,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "14",
+    "categoryId": "2",
+    "picture": "https://images.unsplash.com/photo-1582513166998-56ed1ea02d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80",
+    "name": "Model Rocket",
+    "price": 19.99,
+    "rating": 4.4,
+    "ageGroup": "12+",
+    "description": "Build and launch your own model rocket with this kit.",
+    "sellerName": "Rocket Science",
+    "category": "Science & Exploration",
+    "subcategory": "Physics & Engineering",
+    "availableQuantity": 10,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "15",
+    "categoryId": "2",
+    "picture": "https://images.unsplash.com/photo-1561828995-aa79a2db86dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
+    "name": "Jewelry Making Kit",
+    "price": 16.99,
+    "rating": 4.2,
+    "ageGroup": "8+",
+    "description": "Complete kit for creating your own unique jewelry pieces.",
+    "sellerName": "Crafty Creations",
+    "category": "Science & Exploration",
+    "subcategory": "Craft Supplies",
+    "availableQuantity": 12,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "16",
+    "categoryId": "2",
+    "picture": "https://images.unsplash.com/photo-1590605099496-bf9d79a5d20a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "name": "Clay Set",
+    "price": 8.99,
+    "rating": 4.7,
+    "ageGroup": "5+",
+    "description": "Set of colorful clay for molding and sculpting.",
+    "sellerName": "Artistic Expressions",
+    "category": "Science & Exploration",
+    "subcategory": "Craft Supplies",
+    "availableQuantity": 18,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "17",
+    "categoryId": "2",
+    "picture": "https://images.unsplash.com/photo-1574891934268-6287cda565b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "name": "Origami Kit",
+    "price": 11.99,
+    "rating": 4.5,
+    "ageGroup": "7+",
+    "description": "Complete origami kit with step-by-step instructions for creating various paper models.",
+    "sellerName": "Creative Expressions",
+    "category": "Science & Exploration",
+    "subcategory": "Craft Supplies",
+    "availableQuantity": 15,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "18",
+    "categoryId": "3",
+    "picture": "https://images.unsplash.com/flagged/photo-1551887373-6edba6dacbb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
+    "name": "Coloring Book",
+    "price": 6.99,
+    "rating": 4.3,
+    "ageGroup": "4+",
+    "description": "A fun coloring book with various illustrations to color.",
+    "sellerName": "Artistic Adventures",
+    "category": "Books & Reading",
+    "subcategory": "Activity Books",
+    "availableQuantity": 25,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "19",
+    "categoryId": "3",
+    "picture": "https://plus.unsplash.com/premium_photo-1669613319493-17f9e40758f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
+    "name": "Sticker Set",
+    "price": 5.99,
+    "rating": 4.5,
+    "ageGroup": "3+",
+    "description": "Assortment of colorful stickers for decorating notebooks, cards, and more.",
+    "sellerName": "Creative Crafts",
+    "category": "Books & Reading",
+    "subcategory": "Stationery",
+    "availableQuantity": 30,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "20",
+    "categoryId": "3",
+    "picture": "https://images.unsplash.com/photo-1515896170792-227587541d49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
+    "name": "Puzzle Book",
+    "price": 9.99,
+    "rating": 4.7,
+    "ageGroup": "6+",
+    "description": "A collection of fun and challenging puzzles for kids.",
+    "sellerName": "Brain Teasers",
+    "category": "Books & Reading",
+    "subcategory": "Activity Books",
+    "availableQuantity": 20,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "21",
+    "categoryId": "3",
+    "picture": "https://images.unsplash.com/photo-1642406415849-a410b5d01a94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+    "name": "Story Book",
+    "price": 7.99,
+    "rating": 4.6,
+    "ageGroup": "5+",
+    "description": "An illustrated storybook with engaging stories for young readers.",
+    "sellerName": "Storyland Publications",
+    "category": "Books & Reading",
+    "subcategory": "Children's Books",
+    "availableQuantity": 15,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "22",
+    "categoryId": "3",
+    "picture": "https://images.unsplash.com/photo-1598983868388-46f2c98b2e77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+    "name": "Stamp Set",
+    "price": 12.99,
+    "rating": 4.4,
+    "ageGroup": "4+",
+    "description": "Set of colorful stamps for creating artwork and decorating crafts.",
+    "sellerName": "Artistic Expressions",
+    "category": "Books & Reading",
+    "subcategory": "Stationery",
+    "availableQuantity": 10,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "23",
+    "categoryId": "3",
+    "picture": "https://images.unsplash.com/photo-1516414447565-b14be0adf13e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80",
+    "name": "Crafty Journal",
+    "price": 8.99,
+    "rating": 4.3,
+    "ageGroup": "8+",
+    "description": "A creative journal with prompts and activities for artistic exploration.",
+    "sellerName": "Creative Crafts",
+    "category": "Books & Reading",
+    "subcategory": "Stationery",
+    "availableQuantity": 12,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "24",
+    "categoryId": "3",
+    "picture": "https://images.unsplash.com/photo-1605811792180-61ee063690de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    "name": "Finger Paint Set",
+    "price": 14.99,
+    "rating": 4.8,
+    "ageGroup": "3+",
+    "description": "A set of non-toxic finger paints for creative and mess-free painting.",
+    "sellerName": "Artistic Expressions",
+    "category": "Books & Reading",
+    "subcategory": "Drawing & Painting",
+    "availableQuantity": 15,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "25",
+    "categoryId": "3",
+    "picture": "https://plus.unsplash.com/premium_photo-1663127364290-4f04735243ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80",
+    "name": "Doodle Pad",
+    "price": 6.99,
+    "rating": 4.6,
+    "ageGroup": "5+",
+    "description": "A sketch pad with blank pages for doodling and drawing.",
+    "sellerName": "Creative Expressions",
+    "category": "Books & Reading",
+    "subcategory": "Stationery",
+    "availableQuantity": 20,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "26",
+    "categoryId": "3",
+    "picture": "https://images.unsplash.com/photo-1416339276121-ba1dfa199912?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+    "name": "Stencil Set",
+    "price": 9.99,
+    "rating": 4.5,
+    "ageGroup": "6+",
+    "description": "A set of stencils for creating patterns and designs.",
+    "sellerName": "Crafty Creations",
+    "category": "Books & Reading",
+    "subcategory": "Craft Supplies",
+    "availableQuantity": 18,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  },
+  {
+    "id": "27",
+    "categoryId": "3",
+    "picture": "https://images.unsplash.com/photo-1518337699954-504421410c80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "name": "Washi Tape Set",
+    "price": 7.99,
+    "rating": 4.4,
+    "ageGroup": "4+",
+    "description": "A set of decorative washi tapes for crafting and decorating.",
+    "sellerName": "Artistic Adventures",
+    "category": "Books & Reading",
+    "subcategory": "Craft Supplies",
+    "availableQuantity": 25,
+    "shipping": {
+      "method": "Standard",
+      "time": "3-5 business days"
+    }
+  }
+]
