@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -27,22 +27,22 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Home</a>
+                <Link to='/'>Home</Link>
               </li>
               <li>
-                <a>aboutUs</a>
+                <Link to='/aboutus'>aboutUs</Link>
               </li>
               <li>
-                <a>allToys</a>
+                <Link to='/alltoys'>allToys</Link>
               </li>
               <li>
-                <a>myToys</a>
+                <Link to='/mytoys'>myToys</Link>
               </li>
               <li>
-                <a>addAToy</a>
+                <Link to='/addatoy'>addAToy</Link>
               </li>
               <li>
-                <a>Blog</a>
+                <Link to='/blog'>Blog</Link>
               </li>
             </ul>
           </div>
@@ -52,24 +52,24 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Home</a>
-            </li>
-            <li>
-              <a>aboutUs</a>
-            </li>
-            <li>
-              <a>allToys</a>
-            </li>
-            <li tabIndex={0}>
-              <a>myToys</a>
-            </li>
-            <li>
-              <a>addAToy</a>
-            </li>
-            <li>
-              <a>Blogs</a>
-            </li>
+          <li>
+                <Link to='/'>Home</Link>
+              </li>
+              <li>
+                <Link to='/aboutus'>aboutUs</Link>
+              </li>
+              <li>
+                <Link to='/alltoys'>allToys</Link>
+              </li>
+              <li>
+                <Link to='/mytoys'>myToys</Link>
+              </li>
+              <li>
+                <Link to='/addatoy'>addAToy</Link>
+              </li>
+              <li>
+                <Link to='/blog'>Blog</Link>
+              </li>
           </ul>
         </div>
         <div className="navbar-end">
