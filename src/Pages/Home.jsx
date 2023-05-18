@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import ImageGallery from "../Components/ImageGallery/ImageGallery";
 import useTitle from "../hooks/usTitle";
 import AboutUs from "./AboutUs/AboutUs";
+import Alltoys from "./AllToys/Alltoys";
 
 
 const Home = () => {
@@ -38,6 +39,8 @@ const Home = () => {
       <ImageGallery></ImageGallery>
 
       <AboutUs></AboutUs>
+      
+      <Alltoys></Alltoys>
     </>
   );
 };
