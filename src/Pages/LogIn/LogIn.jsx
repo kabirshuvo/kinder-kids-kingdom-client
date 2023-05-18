@@ -1,8 +1,9 @@
-const LogIn = () => {
+import { Link } from "react-router-dom";
 
-const handleLogIn = event => {
+const LogIn = () => {
+  const handleLogIn = (event) => {
     event.preventDefault();
-}
+  };
 
   return (
     <>
@@ -17,7 +18,13 @@ const handleLogIn = event => {
       >
         <div className="hero-content flex-col w-full">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Login now!</h1>
+          <h1 className="text-3xl font-bold text-slate-800">
+          <>Welcome to</> <br /> <br /><span className="text-success"> Ki</span>nder{" "}
+              <span className="text-success"> Ki</span>ds{" "}
+              <span className="text-success"> Ki</span>ngdom 
+              <br />
+              LogIn
+            </h1>
           </div>
           <div className="card flex-shrink-0 w-full max-w-xl shadow-2xl bg-base-100">
             <div className="card-body">
@@ -27,9 +34,11 @@ const handleLogIn = event => {
                     <span className="label-text">Email</span>
                   </label>
                   <input
-                    type="text"
+                    type="email"
                     placeholder="email"
+                    name="email"
                     className="input input-bordered"
+                    required
                   />
                 </div>
                 <div className="form-control">
@@ -37,20 +46,28 @@ const handleLogIn = event => {
                     <span className="label-text">Password</span>
                   </label>
                   <input
-                    type="text"
+                    type="password"
                     placeholder="password"
+                    name="password"
                     className="input input-bordered"
+                    required
                   />
-                  <label className="label">
+                  {/* <label className="label">
                     <a href="#" className="label-text-alt link link-hover">
                       Forgot password?
                     </a>
-                  </label>
+                  </label> */}
                 </div>
                 <div className="form-control mt-6">
                   <button className="btn btn-primary">Login</button>
                 </div>
               </form>
+              <p>
+                <span className="text-success"><small>New User</small></span>{" "}
+                <Link className="text-warning" to="/register">
+                  Registration
+                </Link>{" "}
+              </p>
             </div>
           </div>
         </div>

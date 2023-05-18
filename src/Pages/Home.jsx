@@ -19,9 +19,9 @@ const Home = () => {
         <div className="container mx-auto">
           <div className="max-w-md text-center md:text-left md:ms-32">
             <h1 className="mb-5 text-5xl font-bold">
-              <span className="text-primary">K</span>inder <br />
-              <span className="text-primary">K</span>ids <br />
-              <span className="text-primary">K</span>ingdom
+              <span className="text-primary">Ki</span>nder <br />
+              <span className="text-primary">Ki</span>ds <br />
+              <span className="text-primary">Ki</span>ngdom
             </h1>
             <p className="mb-5">
               Join us on a journey where learning is disguised as play,
