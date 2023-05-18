@@ -9,7 +9,7 @@ const Alltoys = () => {
   useEffect(() => {
     const fetchToysData = async () => {
       try {
-        const response = await fetch('/allToys.json');
+        const response = await fetch('http://localhost:5000/alltoys');
         const data = await response.json();
         setToysData(data);
       } catch (error) {
@@ -25,7 +25,7 @@ const Alltoys = () => {
     <div className="grid grid-cols-3 gap-4 py-7 my-7">
       <h3 className="col-span-3 text-center text-3xl font-bold py-7">Lets Find Your Toy</h3>
       {toysData.map((toy) => (
-        <SingleToyCard key={toy.id} toy={toy} className="relative bg-slate-700 p-4 shadow-md rounded-lg">
+        <SingleToyCard key={toy._id} toy={toy} className="relative bg-slate-700 p-4 shadow-md rounded-lg">
           
         </SingleToyCard>
       ))}
