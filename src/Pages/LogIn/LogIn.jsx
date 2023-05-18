@@ -1,8 +1,31 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const LogIn = () => {
+
+
+
+const {logIn} = useContext(AuthContext);
+
+
   const handleLogIn = (event) => {
     event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    console.log(email, password)
+
+
+logIn(email, password)
+.then(result => {
+    const loggedUser = result.user;
+    console.log(loggedUser);
+})
+.catch(error => console.error(error))
+
+
   };
 
   return (
