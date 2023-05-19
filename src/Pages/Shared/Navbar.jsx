@@ -1,8 +1,17 @@
-import { Link, } from "react-router-dom";
-
+import { useContext } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/kindersKidLogoTest.svg";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
+
   return (
     <>
       <div className="navbar bg-base-100">
@@ -29,49 +38,74 @@ const Navbar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link to='/'>Home</Link>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to='/aboutus'>aboutUs</Link>
+                <Link to="/aboutus">aboutUs</Link>
               </li>
               <li>
-                <Link to='/alltoys'>allToys</Link>
+                <Link to="/alltoys">allToys</Link>
               </li>
               <li>
-                <Link to='/mytoys'>myToys</Link>
+                <Link to="/mytoys">myToys</Link>
               </li>
               <li>
-                <Link to='/addatoy'>addAToy</Link>
+                <Link to="/addatoy">addAToy</Link>
               </li>
               <li>
-                <Link to='/blog'>Blog</Link>
+                <Link to="/blog">Blog</Link>
               </li>
+              {user?.email ? (
+              <>
+                <li>
+                  <Link to="/mytoys">myToys</Link>
+                </li>
+                <li>
+                  <button onClick={handleLogOut}>LogOut</button>
+                </li>
+              </>
+            ) : (
+              <li>
+                <Link to="/login">LogIn</Link>
+              </li>
+            )}
             </ul>
           </div>
           <Link to="/" className="btn btn-ghost normal-case text-xl">
-           <img src={logo} alt="" />
+            <img src={logo} alt="" />
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-          <li>
-                <Link to='/'>Home</Link>
-              </li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/aboutus">aboutUs</Link>
+            </li>
+            <li>
+              <Link to="/alltoys">allToys</Link>
+            </li>
+            <li>
+              <Link to="/addatoy">addAToy</Link>
+            </li>
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
+            {user?.email ? (
+              <>
+                <li>
+                  <Link to="/mytoys">myToys</Link>
+                </li>
+                <li>
+                  <button onClick={handleLogOut}>LogOut</button>
+                </li>
+              </>
+            ) : (
               <li>
-                <Link to='/aboutus'>aboutUs</Link>
+                <Link to="/login">LogIn</Link>
               </li>
-              <li>
-                <Link to='/alltoys'>allToys</Link>
-              </li>
-              <li>
-                <Link to='/mytoys'>myToys</Link>
-              </li>
-              <li>
-                <Link to='/addatoy'>addAToy</Link>
-              </li>
-              <li>
-                <Link to='/blog'>Blog</Link>
-              </li>
+            )}
           </ul>
         </div>
         <div className="navbar-end">

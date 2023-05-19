@@ -23,20 +23,40 @@ const GetTheToy = () => {
         event.preventDefault();
 
         const form = event.target;
-        const name = form.name.value;
+        const uName = form.name.value;
         const address = form.address.value;
         const email = form.email.value;
 
-       const order = {
-        customerName: name,
+       const orderInfo = {
+        customerName: uName,
         email,
+        picture,
+        ageGroup,
+        rating,
+        sellerName,
         address,
-        toy: _id,
+        toy: name,
+        toy_id: _id,
         price: price
 
        }
 
-       console.log(order);
+      
+
+       fetch(`http://localhost:5000/myToys`, {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(orderInfo)
+       })
+       .then(res => res.json())
+       .then(data => {
+        console.log(data);
+        if(data.insertedId){
+            alert('Order Confirmed')
+        }
+       })
 
 
     }
@@ -73,7 +93,7 @@ const GetTheToy = () => {
   </tbody>
 </table>
 
-<form onSubmit={handleGetTheToy} style={{ height: '70vh' }}>
+<form onSubmit={handleGetTheToy} style={{ height: '75vh' }}>
   <div className="grid grid-cols-1 mx-auto w-1/2">
     <div className="form-control">
       <label className="label">
