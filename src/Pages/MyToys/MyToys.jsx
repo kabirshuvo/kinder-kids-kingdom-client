@@ -6,7 +6,7 @@ const MyToys = () => {
   useTitle("K3 || My Toys");
   const { user } = useContext(AuthContext);
   const [orders, setOrders] = useState([]);
-  const url = `http://localhost:5000/myToys?email=${user?.email}`;
+  const url = `https://kinder-kids-server.vercel.app/myToys?email=${user?.email}`;
 
   useEffect(() => {
     fetch(url)
@@ -17,7 +17,7 @@ const MyToys = () => {
   const handleDelete = id => {
     const proceed = confirm('Are You sure you want to delete');
     if(proceed){
-        fetch(`http://localhost:5000/myToys/${id}`, {
+        fetch(`https://kinder-kids-server.vercel.app/myToys/${id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())
@@ -33,7 +33,7 @@ const MyToys = () => {
 }
 
 const handleConfirm = id => {
-  fetch(`http://localhost:5000/myToys/${id}`, {
+  fetch(`https://kinder-kids-server.vercel.app/myToys/${id}`, {
     method: 'PATCH',
     headers: {
       'content-type': 'application/json'

@@ -43,7 +43,7 @@ const GetTheToy = () => {
 
       
 
-       fetch(`http://localhost:5000/myToys`, {
+       fetch(`https://kinder-kids-server.vercel.app/myToys`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
