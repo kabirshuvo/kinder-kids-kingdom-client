@@ -1,13 +1,25 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const Register = () => {
 
+const [registerError, setRegisterError] = useState('')
+const [success, setSuccess] = useState('');
 const {createUser} = useContext(AuthContext);
+
+const location = useLocation();
+const navigate = useNavigate();
+
+
+const from = location.state?.from?.pathname || "/";
+
+
 
   const handleRegister = (event) => {
     event.preventDefault();
+    setSuccess('');
+
     const form = event.target;
     const name = form.name.value;
     const email = form.email.value;
@@ -20,8 +32,17 @@ const {createUser} = useContext(AuthContext);
     .then(result => {
         const user = result.user;
         console.log(user)
+        setRegisterError('')
+        form.reset();
+        setSuccess('Registration Successfull, Welcome to explore K3');
+        navigate(from, {replace: true})
+
     })
-    .catch(error => console.error(error))
+    .catch(error => {
+      console.error(error.message)
+      setRegisterError(error.message);
+      setSuccess('');
+    })
   };
   return (
     <div>
@@ -84,11 +105,7 @@ const {createUser} = useContext(AuthContext);
                       className="input input-bordered"
                       required
                     />
-                    {/* <label className="label">
-                    <a href="#" className="label-text-alt link link-hover">
-                      Forgot password?
-                    </a>
-                  </label> */}
+                    
                   </div>
                   <div className="form-control">
                     <label className="label">
@@ -101,12 +118,16 @@ const {createUser} = useContext(AuthContext);
                       className="input input-bordered"
                       required
                     />
-                    {/* <label className="label">
-                    <a href="#" className="label-text-alt link link-hover">
-                      Forgot password?
-                    </a>
-                  </label> */}
+                    
                   </div>
+
+{/* // RegisterError Message */}
+
+<p className="text-warning pt-2"><small>{registerError}</small></p>
+<p className="text-success pt-2"><small>{success}</small></p>
+
+
+
                   <div className="form-control mt-6">
                     <button className="btn btn-primary">Register</button>
                   </div>

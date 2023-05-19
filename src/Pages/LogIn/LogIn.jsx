@@ -1,8 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const LogIn = () => {
+  const [logInError, setLogInError] = useState('');
   const { logIn } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
@@ -22,8 +23,13 @@ const LogIn = () => {
         const loggedUser = result.user;
         console.log(loggedUser);
         navigate(from, {replace: true})
+        setLogInError('');
       })
-      .catch((error) => console.error(error));
+      .catch((error) => {
+        console.error(error.message);
+        setLogInError(error.message);
+
+      });
   };
 
   return (
@@ -74,11 +80,12 @@ const LogIn = () => {
                     className="input input-bordered"
                     required
                   />
-                  {/* <label className="label">
-                    <a href="#" className="label-text-alt link link-hover">
-                      Forgot password?
-                    </a>
-                  </label> */}
+                  {/* Error Message */}
+
+                <p className="text-warning pt-2"><small>{logInError}</small></p>
+
+
+
                 </div>
                 <div className="form-control mt-6">
                   <button className="btn btn-primary">Login</button>
