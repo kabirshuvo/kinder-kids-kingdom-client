@@ -15,6 +15,24 @@ const MyToys = () => {
       .then((data) => setOrders(data));
   }, [url]);
 
+  const handleDelete = id => {
+    const proceed = confirm('Are You sure you want to delete');
+    if(proceed){
+        fetch(`http://localhost:5000/myToys/${id}`, {
+            method: 'DELETE'
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.deletedCount > 0){
+                alert('deleted successful');
+                const remaining = orders.filter(order => order._id !== id);
+                setOrders(remaining)
+            }
+        })
+    }
+}
+
   return (
     <div>
       <h3>My Toys Page {orders.length}</h3>
@@ -24,19 +42,21 @@ const MyToys = () => {
           <thead>
             <tr>
               <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
+               Image, ToyName and <br /> delivary Address
               </th>
-              <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
+              <th>Seller and <br /> ratings</th>
+              <th>Price</th>
+              <th>Order Status</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             {
-                orders.map(order => <MyToysRow key={order._id} order={order}></MyToysRow>)
+                orders.map(order => <MyToysRow 
+                    key={order._id} 
+                    order={order}
+                    handleDelete={handleDelete}
+                    ></MyToysRow>)
             }
           </tbody>
           
