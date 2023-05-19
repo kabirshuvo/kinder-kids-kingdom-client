@@ -7,6 +7,7 @@ import AboutUs from "../Pages/AboutUs/AboutUs";
 import AddAToy from "../Pages/AddAToy/AddAToy";
 import Alltoys from "../Pages/AllToys/Alltoys";
 import Bolg from "../Pages/Blog/Bolg";
+import GetTheToy from "../Pages/GetTheToy/GetTheToy";
 import Home from "../Pages/Home";
 import LogIn from "../Pages/LogIn/LogIn";
 import MyToys from "../Pages/MyToys/MyToys";
@@ -33,6 +34,12 @@ const router = createBrowserRouter([
             path: '/toydetails/:id',
             element: <ToyDetails></ToyDetails>,
             loader: ({params}) => fetch(`http://localhost:5000/toydetails/${params.id}`)
+
+        },
+        {
+            path: '/gettoy/:id',
+            element: <GetTheToy></GetTheToy>,
+            loader: ({params}) => fetch(`http://localhost:5000/gettoy/${params.id}`)
 
         },
         {

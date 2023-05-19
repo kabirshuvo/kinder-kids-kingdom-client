@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const ToyDetails = () => {
   const loadedToy = useLoaderData();
@@ -15,14 +15,15 @@ const ToyDetails = () => {
     category,
     subcategory,
     availableQuantity,
+    shipping,
   } = loadedToy;
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="bg-white rounded-lg shadow-lg p-8">
+      <div className="bg-slate-700 rounded-lg shadow-lg p-8">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold">{name}</h2>
-          <div className="text-gray-500">Rating: {rating}</div>
+          <div className="text-success">Rating: {rating}</div>
         </div>
         <div className="flex">
           <img
@@ -53,6 +54,14 @@ const ToyDetails = () => {
               <span className="font-semibold">Available Quantity:</span>{" "}
               {availableQuantity}
             </div>
+            <div className="mb-4">
+              <span className="font-semibold">Shipping:</span>{" "}
+              {`${shipping.method}`} <br />
+              <small className="text-success">{`${shipping.time}`}</small>
+            </div>
+            <Link to={`/gettoy/${_id}`} className="btn btn-primary">
+              Get the Toy
+            </Link>
           </div>
         </div>
       </div>

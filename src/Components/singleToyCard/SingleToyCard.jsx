@@ -7,12 +7,6 @@ const SingleToyCard = ({ toy }) => {
     name,
     picture,
     ageGroup,
-    price,
-    rating,
-    sellerName,
-    description,
-    category,
-    subcategory,
     availableQuantity,
   } = toy;
 
