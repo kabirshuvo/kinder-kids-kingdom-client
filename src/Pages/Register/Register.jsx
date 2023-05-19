@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import SocialLogIn from "../../socialLogin/SocialLogIn";
 
 const Register = () => {
 
@@ -140,6 +141,8 @@ const from = location.state?.from?.pathname || "/";
                     Please LogIn
                   </Link>{" "}
                 </p>
+
+                <SocialLogIn></SocialLogIn>
               </div>
             </div>
           </div>

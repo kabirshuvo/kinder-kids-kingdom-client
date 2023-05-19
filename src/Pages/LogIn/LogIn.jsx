@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import SocialLogIn from "../../socialLogin/SocialLogIn";
 
 const LogIn = () => {
   const [logInError, setLogInError] = useState('');
@@ -99,6 +100,8 @@ const LogIn = () => {
                   Registration
                 </Link>{" "}
               </p>
+
+              <SocialLogIn></SocialLogIn>
             </div>
           </div>
         </div>
