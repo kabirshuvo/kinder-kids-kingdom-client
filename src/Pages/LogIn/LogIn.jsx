@@ -1,13 +1,13 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const LogIn = () => {
+  const { logIn } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-
-
-const {logIn} = useContext(AuthContext);
-
+  const from = location.state?.from?.pathname || "/";
 
   const handleLogIn = (event) => {
     event.preventDefault();
@@ -15,17 +15,15 @@ const {logIn} = useContext(AuthContext);
     const email = form.email.value;
     const password = form.password.value;
 
-    console.log(email, password)
+    console.log(email, password);
 
-
-logIn(email, password)
-.then(result => {
-    const loggedUser = result.user;
-    console.log(loggedUser);
-})
-.catch(error => console.error(error))
-
-
+    logIn(email, password)
+      .then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser);
+        navigate(from, {replace: true})
+      })
+      .catch((error) => console.error(error));
   };
 
   return (
@@ -41,10 +39,11 @@ logIn(email, password)
       >
         <div className="hero-content flex-col w-full">
           <div className="text-center lg:text-left">
-          <h1 className="text-3xl font-bold text-slate-800">
-          <>Welcome to</> <br /> <br /><span className="text-success"> Ki</span>nder{" "}
+            <h1 className="text-3xl font-bold text-slate-800">
+              <>Welcome to</> <br /> <br />
+              <span className="text-success"> Ki</span>nder{" "}
               <span className="text-success"> Ki</span>ds{" "}
-              <span className="text-success"> Ki</span>ngdom 
+              <span className="text-success"> Ki</span>ngdom
               <br />
               LogIn
             </h1>
@@ -86,7 +85,9 @@ logIn(email, password)
                 </div>
               </form>
               <p>
-                <span className="text-success"><small>New User</small></span>{" "}
+                <span className="text-success">
+                  <small>New User</small>
+                </span>{" "}
                 <Link className="text-warning" to="/register">
                   Registration
                 </Link>{" "}
