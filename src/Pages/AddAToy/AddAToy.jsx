@@ -24,7 +24,7 @@ const AddAToy = () => {
         console.log(newToy)
 
         // now have to send data to the server
-            fetch(`http://localhost:5000/alltoys`, {
+            fetch(`https://kinder-kids-server.vercel.app/alltoys`, {
             method: "POST",
             headers: {
                     "content-type": 'application/json' 

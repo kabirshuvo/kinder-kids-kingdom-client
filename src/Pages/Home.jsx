@@ -3,12 +3,14 @@ import ImageGallery from "../Components/ImageGallery/ImageGallery";
 import useTitle from "../hooks/usTitle";
 import AboutUs from "./AboutUs/AboutUs";
 import Alltoys from "./AllToys/Alltoys";
+import NotFound from "./NotFound/NotFound";
 
 
 const Home = () => {
     useTitle('k3 || Home');
   return (
     <>
+   
       <div
         className="hero min-h-screen bg-cover bg-no-repeat bg-center"
         style={{

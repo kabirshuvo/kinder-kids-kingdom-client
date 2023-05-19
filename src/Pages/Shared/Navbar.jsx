@@ -6,6 +6,12 @@ import { AuthContext } from "../../providers/AuthProvider";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
+  if (user !== null) {
+    const displayName = user.displayName;
+    const photoURL = user.photoURL;
+    console.log(displayName, photoURL);
+  }
+
   const handleLogOut = () => {
     logOut()
       .then(() => {})
@@ -56,19 +62,19 @@ const Navbar = () => {
                 <Link to="/blog">Blog</Link>
               </li>
               {user?.email ? (
-              <>
+                <>
+                  <li>
+                    <Link to="/mytoys">myToys</Link>
+                  </li>
+                  <li>
+                    <button onClick={handleLogOut}>LogOut</button>
+                  </li>
+                </>
+              ) : (
                 <li>
-                  <Link to="/mytoys">myToys</Link>
+                  <Link to="/login">LogIn</Link>
                 </li>
-                <li>
-                  <button onClick={handleLogOut}>LogOut</button>
-                </li>
-              </>
-            ) : (
-              <li>
-                <Link to="/login">LogIn</Link>
-              </li>
-            )}
+              )}
             </ul>
           </div>
           <Link to="/" className="btn btn-ghost normal-case text-xl">
@@ -109,8 +115,19 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">User Image</a>
-        </div>
+  {user && (
+    <div className="group inline-block relative">
+      <img
+        src={user.photoURL}
+        alt={user.displayName}
+        className="w-10 h-10 rounded-full"
+      />
+      <div className="opacity-0 bg-black text-white text-xs rounded p-2 absolute top-full left-1/2 transform -translate-x-1/2 -translate-y-2 transition-opacity duration-300 group-hover:opacity-100">
+  {user.displayName}
+</div>
+    </div>
+  )}
+</div>
       </div>
     </>
   );

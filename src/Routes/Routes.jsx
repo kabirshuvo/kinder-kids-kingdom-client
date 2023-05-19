@@ -11,6 +11,7 @@ import GetTheToy from "../Pages/GetTheToy/GetTheToy";
 import Home from "../Pages/Home";
 import LogIn from "../Pages/LogIn/LogIn";
 import MyToys from "../Pages/MyToys/MyToys";
+import NotFound from "../Pages/NotFound/NotFound";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
     {
       path: "/",
       element: <App></App>,
+      errorElement: <NotFound></NotFound>,
       children: [
         {
             path: '/',
@@ -66,5 +68,9 @@ const router = createBrowserRouter([
 
       ]
     },
+    {
+        path: '/error',
+        element:<NotFound></NotFound>
+    }
   ]);
 export default router;
