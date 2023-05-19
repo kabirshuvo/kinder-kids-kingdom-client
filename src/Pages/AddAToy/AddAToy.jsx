@@ -10,20 +10,40 @@ const AddAToy = () => {
         const form = event.target;
 
         const name = form.name.value;
-        const quantity = form.quantity.value;
-        const seller = form.seller.value;
+        const availableQuantity = form.quantity.value;
+        const sellerName = form.seller.value;
         const category = form.category.value;
         const description = form.description.value;
         const price = form.price.value;
         const ageGroup = form.agegroup.value;
         const rating = form.rating.value;
-        const photoUrl = form.photoUrl.value;
+        const picture = form.picture.value;
 
-        const newToy = {name, quantity, seller, description, category, price, ageGroup, rating, photoUrl }
+        const newToy = {name, availableQuantity, sellerName, description, category, price, ageGroup, rating, picture: picture }
 
         console.log(newToy)
 
         // now have to send data to the server
+            fetch(`http://localhost:5000/alltoys`, {
+            method: "POST",
+            headers: {
+                    "content-type": 'application/json' 
+            },
+            body: JSON.stringify(newToy)
+                       
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success...!',
+                    text: 'Your Toy Added Sucessfully',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                  })
+            }
+        })
     
     }
 
@@ -184,7 +204,7 @@ const AddAToy = () => {
               <span className="py-2 text-success">Photo URL</span>
               <input
                 type="text"
-                name="photoUrl"
+                name="picture"
                 placeholder="Add Photo URL"
                 className="input input-bordered w-full"
               />

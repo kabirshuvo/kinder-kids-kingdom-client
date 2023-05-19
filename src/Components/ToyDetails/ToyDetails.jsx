@@ -56,8 +56,8 @@ const ToyDetails = () => {
             </div>
             <div className="mb-4">
               <span className="font-semibold">Shipping:</span>{" "}
-              {`${shipping.method}`} <br />
-              <small className="text-success">{`${shipping.time}`}</small>
+              {`${shipping?.method}`} <br />
+              <small className="text-success">{`${shipping?.time}`}</small>
             </div>
             <Link to={`/gettoy/${_id}`} className="btn btn-primary">
               Get the Toy
