@@ -1,5 +1,5 @@
-const MyToysRow = ({ order, handleDelete }) => {
-  const { _id, picture, price, sellerName, rating, toy, address } = order;
+const MyToysRow = ({ order, handleDelete, handleConfirm }) => {
+  const { _id, picture, price, sellerName, rating, toy, address, status } = order;
 
   return (
     <>
@@ -26,9 +26,10 @@ const MyToysRow = ({ order, handleDelete }) => {
         </td>
         <td>{price}</td>
         <th>
-          <button className="btn btn-ghost btn-xs text-success">
+          {status === 'confirm' ? <span className="font-bold text-primary">Confirmed</span> :
+            <button onClick={() => handleConfirm(_id)} className="btn btn-ghost btn-xs text-success">
             <small>Confirm Order</small>
-          </button>
+          </button>}
         </th>
         <th>
           <button
