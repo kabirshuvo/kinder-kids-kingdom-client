@@ -9,7 +9,7 @@ const Navbar = () => {
   if (user !== null) {
     const displayName = user.displayName;
     const photoURL = user.photoURL;
-    console.log(displayName, photoURL);
+    // console.log(displayName, photoURL);
   }
 
   const handleLogOut = () => {

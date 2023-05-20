@@ -7,6 +7,7 @@ import AboutUs from "../Pages/AboutUs/AboutUs";
 import AddAToy from "../Pages/AddAToy/AddAToy";
 import Alltoys from "../Pages/AllToys/Alltoys";
 import Bolg from "../Pages/Blog/Bolg";
+import CategorisedToys from "../Pages/CategorisedToys/CategorisedToys";
 import GetTheToy from "../Pages/GetTheToy/GetTheToy";
 import Home from "../Pages/Home";
 import LogIn from "../Pages/LogIn/LogIn";
@@ -32,6 +33,14 @@ const router = createBrowserRouter([
         {
             path: '/alltoys',
             element: <Alltoys></Alltoys>
+        },
+        {
+            path: '/categories',
+            element: <CategorisedToys></CategorisedToys>
+        },
+        {
+            path: '/categories/:id',
+            
         },
         {
             path: '/toydetails/:id',
