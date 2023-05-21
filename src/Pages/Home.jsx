@@ -6,6 +6,7 @@ import useTitle from "../hooks/usTitle";
 import AboutUs from "./AboutUs/AboutUs";
 import Alltoys from "./AllToys/Alltoys";
 import CategorisedToys from "./CategorisedToys/CategorisedToys";
+import ContactPage from "./Contact Page/ContactPage";
 
 AOS.init({
   duration: 1900,
@@ -47,7 +48,7 @@ const Home = () => {
       </div>
 
 
-<div>
+<div data-aos="fade-up">
   <CategorisedToys></CategorisedToys>
 </div>
 
@@ -60,11 +61,14 @@ const Home = () => {
 
       <AboutUs></AboutUs>
       </div>
-      <div data-aos="fade-up">
-
-
+      <div className="py-28" data-aos="fade-up">
       <Alltoys></Alltoys>
       </div>
+
+<div data-aos="fade-up" className="py-28">
+  <ContactPage></ContactPage>
+</div>
+
     </>
   );
 };

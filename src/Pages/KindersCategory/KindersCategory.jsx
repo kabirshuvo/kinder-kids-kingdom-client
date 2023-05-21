@@ -6,14 +6,14 @@ const KindersCategory = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const toysPerPage = 20;
 
-  // Calculate index of the last toy in the current page
+  //* Calculating thr index of the last toy in the current page
   const indexOfLastToy = currentPage * toysPerPage;
-  // Calculate index of the first toy in the current page
+  //* Calculating the index of the first toy in the current page
   const indexOfFirstToy = indexOfLastToy - toysPerPage;
-  // Get the current page of toys
+  //* To Get the current page of toys
   const currentToys = categorisedToys.slice(indexOfFirstToy, indexOfLastToy);
 
-  // Function to handle page change
+  //* Function to handle page change
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
   };

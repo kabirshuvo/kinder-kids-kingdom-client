@@ -9,6 +9,7 @@ import AddAToy from "../Pages/AddAToy/AddAToy";
 import Alltoys from "../Pages/AllToys/Alltoys";
 import Bolg from "../Pages/Blog/Bolg";
 import CategorisedToys from "../Pages/CategorisedToys/CategorisedToys";
+import ContactPage from "../Pages/Contact Page/ContactPage";
 import GetTheToy from "../Pages/GetTheToy/GetTheToy";
 import Home from "../Pages/Home";
 import KindersCategory from "../Pages/KindersCategory/KindersCategory";
@@ -81,6 +82,10 @@ const router = createBrowserRouter([
         {
             path: '/register',
             element: <Register></Register>
+        },
+        {
+            path:'/contactus',
+            element: <ContactPage></ContactPage>
         }
 
       ]

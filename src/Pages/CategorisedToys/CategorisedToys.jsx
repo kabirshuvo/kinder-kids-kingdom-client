@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import ArtsandCrafts from "../../Components/CategorisedToyCard/ArtsandCrafts";
+import BooksandReading from "../../Components/CategorisedToyCard/BooksandReading";
+import ScienceandExploration from "../../Components/CategorisedToyCard/ScienceandExploration";
 
 const CategorisedToys = () => {
   const [categories, setCategories] = useState([]);
@@ -15,40 +18,40 @@ const CategorisedToys = () => {
       .catch((error) => console.error(error));
   }, []);
 
-
   useEffect((id) => {
-    fetch(`https://kinder-kids-server.vercel.app/categories/${id}`)
-    .then((res) => res.json())
-    .then((data) => {
-      setCategorizedToys(data);
-    //   console.log(data)
-    })
-    .catch((error) => console.error(error));
-  },[])
+   fetch(`https://kinder-kids-server.vercel.app/categories/${id}`)
+   .then(res => res.json())
+   .then(data => console.log(data))
+   .catch(error => console.log(error))
+  }, [categories]);
 
-
-
-  const handleTabSelect = (index) => {
-    const categoryId = categories[index]._id;
-    console.log(categoryId)
-    
-  };
-
+ 
   return (
     <>
       <h3 className="text-center">Categorized Toys</h3>
-      <Tabs onSelect={handleTabSelect}>
+      <Tabs >
         <TabList>
           {categories.map((category) => (
             <Tab key={category._id}>{category.name}</Tab>
           ))}
         </TabList>
 
-        {categories.map((category) => (
-          <TabPanel key={category._id}>
-            {categorizedToys.map((toy) => console.log(toy))}
-          </TabPanel>
-        ))}
+    <TabPanel>
+      {/* I want to show categoriseToys categoyrId 1 data */}
+      <ArtsandCrafts></ArtsandCrafts>
+    </TabPanel>
+    <TabPanel>
+      {/* I want to show categoriseToys categoyrId id 2 data */}
+
+      <ScienceandExploration></ScienceandExploration>
+    </TabPanel>
+    <TabPanel>
+      {/* I want to show categoriseToys categoyrId id 3 data */}
+
+      <BooksandReading></BooksandReading>
+    </TabPanel>
+
+        
       </Tabs>
     </>
   );

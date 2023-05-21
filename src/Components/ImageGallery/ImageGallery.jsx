@@ -28,7 +28,13 @@ const ImageGallery = () => {
   <p className="py-4 px-16 text-teal-600">
     Explore a wide range of carefully categorized toys at Kinder Kids. We offer a diverse collection of toys designed to entertain and educate children of all ages. Whether you are looking for interactive puzzles, imaginative playsets, or educational games, we have something for everyone. Our toys are crafted with high-quality materials, ensuring durability and safety. Let your childs imagination soar as they dive into the world of play and discovery. Discover the joy of Kinder Kids categorized toys and create memorable moments of fun and learning for your little ones.
   </p>
-
+  <div className="flex gap-7 py-8 mb-8">
+        {categories.map((category) => (
+          <Link to={`/categories/${category.id}`} key={category.id}>
+            {category.name}
+          </Link>
+        ))}
+      </div>
       <div>
         <div className="carousel w-50%">
           <div id="slide1" className="carousel-item relative w-full ">

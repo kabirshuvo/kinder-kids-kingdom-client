@@ -6,10 +6,12 @@ import { AuthContext } from "../../providers/AuthProvider";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
+  console.log(user);
+
   if (user !== null) {
     const displayName = user.displayName;
     const photoURL = user.photoURL;
-    // console.log(displayName, photoURL);
+    console.log(displayName, photoURL);
   }
 
   const handleLogOut = () => {
