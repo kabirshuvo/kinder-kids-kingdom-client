@@ -21,14 +21,16 @@ const CategorisedToys = () => {
   useEffect((id) => {
    fetch(`https://kinder-kids-server.vercel.app/categories/${id}`)
    .then(res => res.json())
-   .then(data => console.log(data))
+   .then(data => setCategorizedToys(data))
    .catch(error => console.log(error))
   }, [categories]);
 
  
   return (
     <>
-      <h3 className="text-center">Categorized Toys</h3>
+      <h3 className="text-center text-success text-3xl py-8"> Kinder Kids Categorized Toys</h3>
+      <p className="text-center text-warning
+       pb-16">Yon Can easily Find You desired Toys from our Categorised Toys</p>
       <Tabs >
         <TabList>
           {categories.map((category) => (

@@ -51,7 +51,7 @@ const AddAToy = () => {
 
     return (
         <>
-         <div className="bg-[rebeccapurple]  pt-8 pb-80 px-24">
+         <div className="bg-[#3366]  pt-8 pb-80 px-24">
       <h3 className="text-3xl text-center mb-8 font-bold">ADD A TOY</h3>
 
       <form onSubmit={handleAddAToy}>

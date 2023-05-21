@@ -1,3 +1,4 @@
+import { updateProfile } from "firebase/auth";
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
@@ -33,11 +34,13 @@ const from = location.state?.from?.pathname || "/";
     createUser(email, password)
     .then(result => {
         const user = result.user;
-        console.log(user)
+       
         setRegisterError('')
         form.reset();
         setSuccess('Registration Successfull, Welcome to explore K3');
         navigate(from, {replace: true})
+        updateUserData(result.user, name, photoURL)
+        console.log(user)
 
     })
     .catch(error => {
@@ -46,6 +49,18 @@ const from = location.state?.from?.pathname || "/";
       setSuccess('');
     })
   };
+
+  const updateUserData = (user, name, photoURL) => {
+    updateProfile(user,  {
+      displayName: name, photoURL: photoURL,
+    })
+    .then(()=>{
+      console.log('user name updated')
+    })
+    .catch(error => {
+      setRegisterError(error.message);
+    })
+  }
   return (
     <div>
       <>
@@ -72,18 +87,20 @@ const from = location.state?.from?.pathname || "/";
             <div className="card flex-shrink-0 w-full max-w-xl shadow-2xl bg-base-100">
               <div className="card-body">
                 <form onSubmit={handleRegister}>
+                {/* Nane Field */}
                   <div className="form-control">
                     <label className="label">
                       <span className="label-text">Name</span>
                     </label>
                     <input
                       type="text"
-                      placeholder="name"
+                      placeholder="Your Name Please"
                       name="name"
                       className="input input-bordered"
                       required
                     />
                   </div>
+                  {/* Email Field */}
                   <div className="form-control">
                     <label className="label">
                       <span className="label-text">Email</span>
@@ -96,6 +113,7 @@ const from = location.state?.from?.pathname || "/";
                       required
                     />
                   </div>
+                  {/* Password */}
                   <div className="form-control">
                     <label className="label">
                       <span className="label-text">Password</span>
@@ -109,6 +127,7 @@ const from = location.state?.from?.pathname || "/";
                     />
                     
                   </div>
+                  {/* Confirm Password */}
                   <div className="form-control">
                     <label className="label">
                       <span className="label-text">Confirm Your Password</span>
@@ -122,6 +141,7 @@ const from = location.state?.from?.pathname || "/";
                     />
                     
                   </div>
+                  {/* Photo Url */}
                   <div className="form-control">
                     <label className="label">
                       <span className="label-text">Put Your Photo URL</span>
