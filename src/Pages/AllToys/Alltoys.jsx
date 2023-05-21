@@ -1,10 +1,9 @@
-import { useEffect, useState } from 'react';
-import SingleToyCard from '../../Components/singleToyCard/singleToyCard';
-import useTitle from '../../hooks/usTitle';
+import { useEffect, useState } from "react";
+import SingleToyCard from "../../Components/singleToyCard/singleToyCard";
+import useTitle from "../../hooks/usTitle";
 
 const Alltoys = () => {
-
-  useTitle('k3 || All Toys');
+  useTitle("k3 || All Toys");
 
   const [toysData, setToysData] = useState([]);
   const [visibleToys, setVisibleToys] = useState([]);
@@ -13,18 +12,17 @@ const Alltoys = () => {
   useEffect(() => {
     const fetchToysData = async () => {
       try {
-        const response = await fetch('https://kinder-kids-server.vercel.app/alltoys');
+        const response = await fetch(
+          "https://kinder-kids-server.vercel.app/alltoys"
+        );
         const data = await response.json();
         setToysData(data);
 
-        //* Display only 6 toys initially
-        setVisibleToys(data.slice(0, 6)); 
+        setVisibleToys(data.slice(0, 9));
 
-        //* Show "Show More" button if there are more than 6 toys
-        setShowMore(data.length > 6); 
-
+        setShowMore(data.length > 9);
       } catch (error) {
-        console.error('Error fetching toy data:', error);
+        console.error("Error fetching toy data:", error);
       }
     };
 
@@ -34,24 +32,23 @@ const Alltoys = () => {
   const handleShowMore = () => {
     const remainingToys = toysData.slice(visibleToys.length);
 
-    //* Load 6 more toys
-    const nextToys = remainingToys.slice(0, 6); 
+    const nextToys = remainingToys.slice(0, 9);
 
-    setVisibleToys(prevVisibleToys => [...prevVisibleToys, ...nextToys]);
-    
-    setShowMore(remainingToys.length > 6);
+    setVisibleToys((prevVisibleToys) => [...prevVisibleToys, ...nextToys]);
+
+    setShowMore(remainingToys.length > 9);
   };
 
   return (
-    <div className="grid grid-cols-3 gap-4 py-7 my-7">
-      <h3 className="col-span-3 text-center text-3xl font-bold py-7">Lets Find Your Toy</h3>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-7 my-7">
+      <h3 className="col-span-1 sm:col-span-2 md:col-span-3 text-center text-3xl font-bold py-7">Find Your Toy</h3>
       {visibleToys.map((toy) => (
-        <SingleToyCard key={toy._id} toy={toy} className="relative bg-slate-700 p-4 shadow-md rounded-lg" />
+        <SingleToyCard key={toy._id} toy={toy} className="flex justify-center" />
       ))}
       {showMore && (
-        <div className="col-span-3 flex justify-center w-full">
+        <div className="col-span-1 sm:col-span-2 md:col-span-3 flex justify-center">
           <button
-            className="bg-primary text-white px-4 rounded-md w-full mt-16"
+            className="bg-primary text-white px-4 py-2 rounded-md w-full mt-16"
             onClick={handleShowMore}
           >
             Show More
