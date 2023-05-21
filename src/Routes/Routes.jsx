@@ -1,6 +1,7 @@
 import {
     createBrowserRouter
 } from "react-router-dom";
+import ImageGallery from "../Components/ImageGallery/ImageGallery";
 import ToyDetails from "../Components/ToyDetails/ToyDetails";
 import App from "../Layout/App";
 import AboutUs from "../Pages/AboutUs/AboutUs";
@@ -10,6 +11,7 @@ import Bolg from "../Pages/Blog/Bolg";
 import CategorisedToys from "../Pages/CategorisedToys/CategorisedToys";
 import GetTheToy from "../Pages/GetTheToy/GetTheToy";
 import Home from "../Pages/Home";
+import KindersCategory from "../Pages/KindersCategory/KindersCategory";
 import LogIn from "../Pages/LogIn/LogIn";
 import MyToys from "../Pages/MyToys/MyToys";
 import NotFound from "../Pages/NotFound/NotFound";
@@ -40,7 +42,13 @@ const router = createBrowserRouter([
         },
         {
             path: '/categories/:id',
+            element: <KindersCategory></KindersCategory>,
+            loader: ({params}) => fetch(`https://kinder-kids-server.vercel.app/categories/${params.id}`)
             
+        },
+        {
+            path: '/imagegelary',
+            element: <ImageGallery></ImageGallery>
         },
         {
             path: '/toydetails/:id',

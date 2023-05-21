@@ -53,9 +53,15 @@ const GetTheToy = () => {
        .then(res => res.json())
        .then(data => {
         console.log(data);
-        if(data.insertedId){
-            alert('Order Confirmed')
-        }
+        // if(data.insertedId){
+          
+        //   Swal.fire({
+        //     title: 'Success...!',
+        //     text: 'Your Toy Added Sucessfully',
+        //     icon: 'success',
+        //     confirmButtonText: 'Ok'
+        //   })
+        // }
        })
 
 

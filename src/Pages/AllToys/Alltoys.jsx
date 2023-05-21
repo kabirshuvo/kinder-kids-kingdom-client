@@ -49,9 +49,9 @@ const Alltoys = () => {
         <SingleToyCard key={toy._id} toy={toy} className="relative bg-slate-700 p-4 shadow-md rounded-lg" />
       ))}
       {showMore && (
-        <div className="col-span-3 flex justify-center">
+        <div className="col-span-3 flex justify-center w-full">
           <button
-            className="bg-primary text-white px-4 py-2 rounded-md"
+            className="bg-primary text-white px-4 rounded-md w-full mt-16"
             onClick={handleShowMore}
           >
             Show More

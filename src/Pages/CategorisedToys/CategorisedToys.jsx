@@ -7,7 +7,7 @@ const CategorisedToys = () => {
   const [categorizedToys, setCategorizedToys] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/categories")
+    fetch("https://kinder-kids-server.vercel.app/categories")
       .then((res) => res.json())
       .then((data) => {
         setCategories(data);
@@ -17,11 +17,11 @@ const CategorisedToys = () => {
 
 
   useEffect((id) => {
-    fetch(`http://localhost:5000/categories/${id}`)
+    fetch(`https://kinder-kids-server.vercel.app/categories/${id}`)
     .then((res) => res.json())
     .then((data) => {
       setCategorizedToys(data);
-      console.log(data)
+    //   console.log(data)
     })
     .catch((error) => console.error(error));
   },[])

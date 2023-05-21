@@ -26,8 +26,9 @@ const from = location.state?.from?.pathname || "/";
     const email = form.email.value;
     const password = form.password.value;
     const confirm = form.confirm.value;
+    const photoURL = form.photoURL.value;
 
-    console.log(name, email, password, confirm)
+    console.log(name, email, password, confirm, photoURL)
 
     createUser(email, password)
     .then(result => {
@@ -118,6 +119,19 @@ const from = location.state?.from?.pathname || "/";
                       name="confirm"
                       className="input input-bordered"
                       required
+                    />
+                    
+                  </div>
+                  <div className="form-control">
+                    <label className="label">
+                      <span className="label-text">Put Your Photo URL</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Put Your Photo URL Here"
+                      name="photoURL"
+                      className="input input-bordered"
+                      
                     />
                     
                   </div>

@@ -26,7 +26,7 @@ const SingleToyCard = ({ toy }) => {
 
       <Link
         to={`/toydetails/${_id}`}
-        className="absolute bottom-0 right-0 transform  bg-primary text-white px-4 py-2 rounded-md"
+        className="absolute bottom-0 right-0 transform  bg-slate-700 text-success px-4  rounded-md "
       >
         <FaWpexplorer></FaWpexplorer> view Details
       </Link>
