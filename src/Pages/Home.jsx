@@ -25,50 +25,40 @@ const Home = () => {
         <div className="hero-overlay bg-opacity-80"></div>
 
         <div className="container mx-auto">
-          <div className="max-w-md text-center md:text-left md:ms-32">
+          <div className="max-w-xl text-center md:text-left md:ms-32">
             <h1 className="mb-5 text-5xl font-bold">
-              <span className="text-primary">Ki</span>nder <br />
-              <span className="text-primary">Ki</span>ds <br />
-              <span className="text-primary">Ki</span>ngdom
-            </h1>
-            <p className="mb-5">
-              Join us on a journey where learning is disguised as play,
-              fostering creativity, curiosity, and growth. From colorful
-              characters to enchanting landscapes, Kinder Kids Kingdom is where
+              <span className="text-amber-200">Ki</span>nder <br />
+              <span className="text-amber-200">Ki</span>ds <br />
+              <span className="text-amber-200">Ki</span>ngdom </h1>
+            <p className="my-5 text-1xl text-success">
+              From colorful characters to enchanting landscapes, Kinder Kids Kingdom is where
               dreams come alive, making education an enchanting and
-              unforgettable experience for your little ones. Get ready to unlock
-              the gates to endless fun and discovery in our kingdom of joy and
-              learning!
+              unforgettable experience for your little ones.
             </p>
-            <Link to="/alltoys" className="btn btn-primary">
+            <Link to="/alltoys" className="btn btn-amber-200 my-28">
               View All Toys
             </Link>
           </div>
         </div>
       </div>
 
-
-<div data-aos="fade-up">
-  <CategorisedToys></CategorisedToys>
-</div>
-
+      <div data-aos="fade-up">
+        <CategorisedToys></CategorisedToys>
+      </div>
 
       <div data-aos="fade-up">
         <ImageGallery></ImageGallery>
       </div>
       <div data-aos="fade-up">
-
-
-      <AboutUs></AboutUs>
+        <AboutUs></AboutUs>
       </div>
       <div className="py-28" data-aos="fade-up">
-      <Alltoys></Alltoys>
+        <Alltoys></Alltoys>
       </div>
 
-<div data-aos="fade-up" className="py-28">
-  <ContactPage></ContactPage>
-</div>
-
+      <div data-aos="fade-up" className="py-28">
+        <ContactPage></ContactPage>
+      </div>
     </>
   );
 };
